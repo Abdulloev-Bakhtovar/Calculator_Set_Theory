@@ -1,0 +1,3 @@
+﻿  main.cpp
+C:\Users\Dell\Desktop\c+++\Lab_01_Plenty\main.cpp(33,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Lab_01_Plenty.vcxproj -> C:\Users\Dell\Desktop\c+++\Lab_01_Plenty\x64\Debug\Lab_01_Plenty.exe
