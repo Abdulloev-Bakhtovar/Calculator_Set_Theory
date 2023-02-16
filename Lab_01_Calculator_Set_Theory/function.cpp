@@ -6,51 +6,6 @@
 #include <set>
 using namespace std;
 
-////UNIVERSUM
-//void addElementToStringUniversum(string& str)
-//{
-//    cin.ignore();
-//    getline(cin, str);
-//}
-//
-//void stringToIntUniversum(string str, int*& arr, int& sizeUniversum)
-//{
-//    int count = 0;
-//    //sizeUniversum = count_if((*str).begin(), (*str).end(), [](int c) { return c != ' '; });
-//    string str2 = str;
-//    string::size_type size;
-//    while ((str.size()))
-//    {
-//        int temp = stoi(str, &size);
-//        count++;
-//        str = (str).substr(size);
-//    }
-//    sizeUniversum = count;
-//    arr = new int[sizeUniversum + 2];
-//    int index = 0;
-//    while ((str2.size()))
-//    {
-//        int newInt = stoi(str2, &size);
-//        arr[index] = newInt;
-//        str2 = (str2).substr(size);
-//        index++;
-//    }
-//}
-//
-//void randomNumUniversum(int*& arr, int& sizeUniversum)
-//{
-//    cout << "Введите размер: ";
-//    cin >> sizeUniversum;
-//    int start, finish;
-//    cout << "Введите диапазон через пробел: ";
-//    cin >> start >> finish;
-//    arr = new int[sizeUniversum];
-//    for (int i = 0; i < sizeUniversum; i++)
-//    {
-//        arr[i] = start + rand() % finish;
-//    }
-//}
-
 ////Universum
 void addElementToStringUniversum(string& str)
 {
@@ -83,10 +38,10 @@ void stringToIntUniversum(string str, int*& arr, int& sizePlenty)
 }
 void randomNumUniversum(int*& arr, int& sizePlenty)
 {
-    cout << "Введите размер: ";
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г°Г Г§Г¬ГҐГ°: ";
     cin >> sizePlenty;
     int finish;
-    cout << "Введите max: ";
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ max: ";
     cin >> finish;
     arr = new int[sizePlenty];
     for (int i = 0; i < sizePlenty; i++)
@@ -107,7 +62,7 @@ void addElementToString(string& str, int* Universum, int sizeUniversum)
     for (int n : st)
         cout << n << " ";
     cout << "]" << endl;
-    cout << "Введите элементы: ";
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ ГЅГ«ГҐГ¬ГҐГ­ГІГ»: ";
     cin.ignore();
     getline(cin, str);
 }
@@ -153,8 +108,8 @@ void stringToInt(string str, int*& arr, int& sizePlenty, int* Universum, int siz
         }
         if (search == i)
         {
-            cout << "Найден элемент который не находится в Универсум!" << endl;
-            cout << "Множeство не сохранено!" << endl;
+            cout << "ГЌГ Г©Г¤ГҐГ­ ГЅГ«ГҐГ¬ГҐГ­ГІ ГЄГ®ГІГ®Г°Г»Г© Г­ГҐ Г­Г ГµГ®Г¤ГЁГІГ±Гї Гў Г“Г­ГЁГўГҐГ°Г±ГіГ¬!" << endl;
+            cout << "ГЊГ­Г®Г¦eГ±ГІГўГ® Г­ГҐ Г±Г®ГµГ°Г Г­ГҐГ­Г®!" << endl;
             delete[] arr;
             arr = nullptr;
             sizePlenty = 0;
@@ -165,7 +120,7 @@ void stringToInt(string str, int*& arr, int& sizePlenty, int* Universum, int siz
 void randomNum(int*& arr, int& sizePlenty,int* Universum, int sizeUniversum)
 {
     set<int> st;
-    cout << "Введите размер: ";
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ Г°Г Г§Г¬ГҐГ°: ";
     cin >> sizePlenty;
     int finish;
     cout << "Universum = [ ";
@@ -176,7 +131,7 @@ void randomNum(int*& arr, int& sizePlenty,int* Universum, int sizeUniversum)
     for (int n : st)
         cout << n << " ";
     cout << "]" << endl;
-    cout << "Введите max: ";
+    cout << "Г‚ГўГҐГ¤ГЁГІГҐ max: ";
     cin >> finish;
     arr = new int[sizePlenty];
     int a;
@@ -208,8 +163,8 @@ void print(int* arr, int size)
     }
 }
 
-//Операция над множеств
-void operationUnification(int* arrF,int sizeF,int* arrS,int sizeS)//объединение +
+//ГЋГЇГҐГ°Г Г¶ГЁГї Г­Г Г¤ Г¬Г­Г®Г¦ГҐГ±ГІГў
+void operationUnification(int* arrF,int sizeF,int* arrS,int sizeS)//Г®ГЎГєГҐГ¤ГЁГ­ГҐГ­ГЁГҐ +
 {
     set<int> st;
     for (int i = 0; i < sizeF; i++)
@@ -227,7 +182,7 @@ void operationUnification(int* arrF,int sizeF,int* arrS,int sizeS)//объединение 
     }
     cout << "]" << endl;
 }
-void operationIntersection(int* arrF, int sizeF, int* arrS, int sizeS)//пресечение *
+void operationIntersection(int* arrF, int sizeF, int* arrS, int sizeS)//ГЇГ°ГҐГ±ГҐГ·ГҐГ­ГЁГҐ *
 {
     set<int> st;
     int a;
@@ -250,7 +205,7 @@ void operationIntersection(int* arrF, int sizeF, int* arrS, int sizeS)//пресечен
     }
     cout << "]" << endl;
 }
-void operationDifference(int* arrF, int sizeF, int* arrS, int sizeS)/*Разност \ */
+void operationDifference(int* arrF, int sizeF, int* arrS, int sizeS)/*ГђГ Г§Г­Г®Г±ГІ \ */
 {
     set<int> st;
     for (int i = 0; i < sizeF; i++)
@@ -308,7 +263,7 @@ void operationSymmetricDifference(int* arrF, int sizeF, int* arrS, int sizeS)
 }
 
 
-void operationCheckOccurrence(int* arrF, int sizeF, int* arrS, int sizeS)//Проверить вхождение
+void operationCheckOccurrence(int* arrF, int sizeF, int* arrS, int sizeS)//ГЏГ°Г®ГўГҐГ°ГЁГІГј ГўГµГ®Г¦Г¤ГҐГ­ГЁГҐ
 {
     bool isIn = false;
     for (int i = 0; i < sizeF; i++)
@@ -329,7 +284,7 @@ void operationCheckOccurrence(int* arrF, int sizeF, int* arrS, int sizeS)//Прове
     }
     cout << "Result: " << (isIn ? "True" : "False") << endl;
 }
-void operationAddition(int* arrF, int sizeF, int* universum, int sizeUniversum)//Дополнит до универсема !А
+void operationAddition(int* arrF, int sizeF, int* universum, int sizeUniversum)//Г„Г®ГЇГ®Г«Г­ГЁГІ Г¤Г® ГіГ­ГЁГўГҐГ°Г±ГҐГ¬Г  !ГЂ
 {
     set<int> st;
     for (int i=0; i< sizeUniversum; i++)
