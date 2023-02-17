@@ -4,7 +4,7 @@
 #include <ctime>
 using namespace std;
 
-/*Функции function*/
+/*Функции*/
 //Universum
 void addElementToStringUniversum(string& str);
 void stringToIntUniversum(string str, int*& arr, int& sizePlenty);
@@ -53,7 +53,7 @@ int main()
 	while (BoolSelectAction)
 	{
 		/********************************************/
-		
+
 		cout << "Universum = { ";
 		print(Universum, sizeUniversum);
 		cout << "}" << endl;
@@ -87,7 +87,7 @@ int main()
 		cout << "   6) Дополнить до универсума" << endl;
 		cout << "   7) Выход" << endl;
 		int SelectAction;
-		cout << "Выберите действие [1-7]: ";	
+		cout << "Выберите действие [1-7]: ";
 		cin >> SelectAction;
 		switch (SelectAction)
 		{
@@ -195,7 +195,7 @@ int main()
 							}
 							case 2://рандом элемент для множество
 							{
-								randomNum(PlentyA, sizePlentyA,Universum,sizeUniversum);
+								randomNum(PlentyA, sizePlentyA, Universum, sizeUniversum);
 								break;
 							}
 							case 3:
@@ -222,7 +222,7 @@ int main()
 						}
 						case 'B'://множество B
 						{
-							
+
 							cout << "Выберите действие:" << endl;
 							cout << "   1) Ручной ввод" << endl;
 							cout << "   2) Случайный ввод (ДСЧ)" << endl;
@@ -238,7 +238,7 @@ int main()
 								string ManualInput;
 								addElementToString(ManualInput, Universum, sizeUniversum);
 								stringToInt(ManualInput, PlentyB, sizePlentyB, Universum, sizeUniversum);
-								
+
 								break;
 							}
 							case 2://рандом элемент для множество
@@ -472,7 +472,7 @@ int main()
 						cout << "Введите множеств(A,B,C,D,E, (X - для выхода)): ";
 						char namePlenty;
 						cin >> namePlenty;
-						switch(namePlenty)
+						switch (namePlenty)
 						{
 						case 'A':
 						{
@@ -570,7 +570,7 @@ int main()
 			bool BoolOperationOnSets = true;
 			while (BoolOperationOnSets)
 			{
-				
+
 				char firstPlenty, secondPlenty, operation;
 				cout << "Объединение(+)\nПересечение(*)\nРазность(\\)\nСимметрическое разность(%)\nВыход(ext)" << endl;
 				cout << "Например: A+B" << endl;
@@ -1506,13 +1506,21 @@ int main()
 		}
 		case 4://Проверить вхождение (первый находится в второй (А<B))
 		{
+			if (Universum == nullptr)
+			{
+				system("cls");
+				cout << "**********************" << endl;
+				cout << ">УНИВЕРСУМ пусто" << endl;
+				cout << "**********************" << endl;
+				break;
+			}
 			bool BoolOperationOnSets = true;
 			while (BoolOperationOnSets)
 			{
 
 				char firstPlenty, secondPlenty, operation;
 				cout << "\nВыход(ext)" << endl;
-				cout << "Например: A<B" << endl;
+				cout << "Например: Plenty<Plenty" << endl;
 				cout << "Введите: ";
 				cin >> firstPlenty >> operation >> secondPlenty;
 				switch (firstPlenty)
@@ -1566,7 +1574,7 @@ int main()
 							operationCheckOccurrence(PlentyA, sizePlentyA, PlentyC, sizePlentyC);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1585,7 +1593,7 @@ int main()
 							operationCheckOccurrence(PlentyA, sizePlentyA, PlentyD, sizePlentyD);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1635,7 +1643,7 @@ int main()
 							operationCheckOccurrence(PlentyB, sizePlentyB, PlentyB, sizePlentyB);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1654,7 +1662,7 @@ int main()
 							operationCheckOccurrence(PlentyB, sizePlentyB, PlentyA, sizePlentyA);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1673,7 +1681,7 @@ int main()
 							operationCheckOccurrence(PlentyB, sizePlentyB, PlentyC, sizePlentyC);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1692,7 +1700,7 @@ int main()
 							operationCheckOccurrence(PlentyB, sizePlentyB, PlentyD, sizePlentyD);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1711,7 +1719,7 @@ int main()
 							operationCheckOccurrence(PlentyB, sizePlentyB, PlentyE, sizePlentyE);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1743,7 +1751,7 @@ int main()
 							operationCheckOccurrence(PlentyC, sizePlentyC, PlentyC, sizePlentyC);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1762,7 +1770,7 @@ int main()
 							operationCheckOccurrence(PlentyC, sizePlentyC, PlentyA, sizePlentyA);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1781,7 +1789,7 @@ int main()
 							operationCheckOccurrence(PlentyC, sizePlentyC, PlentyB, sizePlentyB);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1800,7 +1808,7 @@ int main()
 							operationCheckOccurrence(PlentyC, sizePlentyC, PlentyD, sizePlentyD);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1819,7 +1827,7 @@ int main()
 							operationCheckOccurrence(PlentyC, sizePlentyC, PlentyE, sizePlentyE);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1851,7 +1859,7 @@ int main()
 							operationCheckOccurrence(PlentyD, sizePlentyD, PlentyD, sizePlentyD);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1870,7 +1878,7 @@ int main()
 							operationCheckOccurrence(PlentyD, sizePlentyD, PlentyA, sizePlentyA);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1889,7 +1897,7 @@ int main()
 							operationCheckOccurrence(PlentyD, sizePlentyD, PlentyB, sizePlentyB);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1908,7 +1916,7 @@ int main()
 							operationCheckOccurrence(PlentyD, sizePlentyD, PlentyC, sizePlentyC);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1927,7 +1935,7 @@ int main()
 							operationCheckOccurrence(PlentyD, sizePlentyD, PlentyE, sizePlentyE);
 							break;
 						}
-					
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1959,7 +1967,7 @@ int main()
 							operationCheckOccurrence(PlentyE, sizePlentyE, PlentyE, sizePlentyE);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1978,7 +1986,7 @@ int main()
 							operationCheckOccurrence(PlentyE, sizePlentyE, PlentyA, sizePlentyA);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -1997,7 +2005,7 @@ int main()
 							operationCheckOccurrence(PlentyE, sizePlentyE, PlentyB, sizePlentyB);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -2016,7 +2024,7 @@ int main()
 							operationCheckOccurrence(PlentyE, sizePlentyE, PlentyC, sizePlentyC);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -2035,7 +2043,7 @@ int main()
 							operationCheckOccurrence(PlentyE, sizePlentyE, PlentyD, sizePlentyD);
 							break;
 						}
-						
+
 						default:
 							system("cls");
 							cout << "**********************************" << endl;
@@ -2077,7 +2085,7 @@ int main()
 			{
 				int num;
 				char Plenty, operation;
-				cout << "\nВыход(7)" << endl;
+				cout << "\nВыход(7 77)" << endl;
 				cout << "Например: num < Plenty" << endl;
 				cout << "Введите: ";
 				cin >> num >> operation >> Plenty;
@@ -2089,31 +2097,79 @@ int main()
 					{
 					case 'U':
 					{
+						if (Universum == nullptr)
+						{
+							system("cls");
+							cout << "**********************" << endl;
+							cout << ">УНИВЕРСУМ пусто" << endl;
+							cout << "**********************" << endl;
+							break;
+						}
 						operationAdditionNum(Universum, sizeUniversum, num);
 						break;
 					}
 					case 'A':
 					{
-						operationAdditionNum(PlentyA,sizePlentyA,num);
+						if (PlentyA == nullptr)
+						{
+							system("cls");
+							cout << "**********************" << endl;
+							cout << "> Множеств " << Plenty << " пусто" << endl;
+							cout << "**********************" << endl;
+							break;
+						}
+						operationAdditionNum(PlentyA, sizePlentyA, num);
 						break;
 					}
 					case 'B':
 					{
+						if (PlentyB == nullptr)
+						{
+							system("cls");
+							cout << "**********************" << endl;
+							cout << "> Множеств " << Plenty << " пусто" << endl;
+							cout << "**********************" << endl;
+							break;
+						}
 						operationAdditionNum(PlentyB, sizePlentyB, num);
 						break;
 					}
 					case 'C':
 					{
+						if (PlentyC == nullptr)
+						{
+							system("cls");
+							cout << "**********************" << endl;
+							cout << "> Множеств " << Plenty << " пусто" << endl;
+							cout << "**********************" << endl;
+							break;
+						}
 						operationAdditionNum(PlentyC, sizePlentyC, num);
 						break;
 					}
 					case 'D':
 					{
+						if (PlentyD == nullptr)
+						{
+							system("cls");
+							cout << "**********************" << endl;
+							cout << "> Множеств " << Plenty << " пусто" << endl;
+							cout << "**********************" << endl;
+							break;
+						}
 						operationAdditionNum(PlentyD, sizePlentyD, num);
 						break;
 					}
 					case 'E':
 					{
+						if (PlentyE == nullptr)
+						{
+							system("cls");
+							cout << "**********************" << endl;
+							cout << "> Множеств " << Plenty << " пусто" << endl;
+							cout << "**********************" << endl;
+							break;
+						}
 						operationAdditionNum(PlentyE, sizePlentyE, num);
 						break;
 					}
@@ -2225,5 +2281,5 @@ int main()
 			break;
 		}
 	}
-	
+
 }

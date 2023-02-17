@@ -1,1 +1,2 @@
 C:\Users\Dell\Desktop\c+++\Lab_01_Plenty\x64\Debug\Lab_01_Plenty.exe
+C:\Users\Dell\source\repos\Abdulloev-Bakhtovar\Calculator_Set_Theory\Lab_01_Calculator_Set_Theory\x64\Debug\Lab_01_Plenty.exe

@@ -1,3 +1,6 @@
-﻿  main.cpp
-C:\Users\Dell\Desktop\c+++\Lab_01_Plenty\main.cpp(33,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
-  Lab_01_Plenty.vcxproj -> C:\Users\Dell\Desktop\c+++\Lab_01_Plenty\x64\Debug\Lab_01_Plenty.exe
+﻿  function.cpp
+  main.cpp
+C:\Users\Dell\source\repos\Abdulloev-Bakhtovar\Calculator_Set_Theory\Lab_01_Calculator_Set_Theory\main.cpp(33,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+  LINK : не найден или не выполнена сборка C:\Users\Dell\source\repos\Abdulloev-Bakhtovar\Calculator_Set_Theory\Lab_01_Calculator_Set_Theory\x64\Debug\Lab_01_Plenty.exe при последней инкрементной компоновке; выполняется полная компоновка
+  Lab_01_Plenty.vcxproj -> C:\Users\Dell\source\repos\Abdulloev-Bakhtovar\Calculator_Set_Theory\Lab_01_Calculator_Set_Theory\x64\Debug\Lab_01_Plenty.exe
