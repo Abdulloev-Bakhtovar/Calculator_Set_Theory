@@ -4,7 +4,7 @@
 #include <ctime>
 using namespace std;
 
-/*Функции*/
+/*Функции function*/
 //Universum
 void addElementToStringUniversum(string& str);
 void stringToIntUniversum(string str, int*& arr, int& sizePlenty);
